@@ -75,7 +75,7 @@ class Board:
             indices_to_change.clear()
             self.show_board(f"Generation {i}")
 
-game = Board(25)
+game = Board(10)
 # data = input("enter the cells separated by comma: ")
 data = "c1, d2, b3, c3, d3"
 game.input(data)

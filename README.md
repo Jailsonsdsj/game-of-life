@@ -1,10 +1,14 @@
-# The game life
+# The game of life
 
-Proposal for exercise of the discipline Programming II
+Proposal for project of the discipline Programming II. The project consists in recreate the game of life, created by mathematical Jhwon Horton Conway in 1970. 
+
+According to wikipedia, the game can be described as:
+
+> "a cellular automaton [...]. It is a zero-player game, 2 meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves. It is Turing complete and can simulate a universal constructor or any other Turing machine."
 
 
 
-Rules:
+## Rules
 
 * Any living cell with less than two neighboring living cells dies, due to low population;
 * Any living cell with more than three neighboring living cells dies, due to high population;
@@ -18,66 +22,41 @@ You will also have to think about:
 
 
 
+## How to run
+
+Just download the main.py file and execute in you personal computer (you need python 3 installed)
 
 
-ANOTANDO OS PASSOS PARA N ESQUECER QUANDO FOR TERMINAR!!!!
+
+## Methods
+
+Creating a board and passing the number of generation
+
+```python
+game = board(25)
+```
+
+Defining the initial cells
+
+```
+data = "c1, d2, b3, c3, d3"
+```
+
+Input data into board
+
+```
+game.input(data)
+```
+
+Start simulator
+
+```
+game.start()
+```
+
+
+
+
 
  
 
-**neighborhood calculation**
-
-Create a function that returns the result of the neighbors amount:
-
-
-
-top_left_diagonal = current - 1 column - 1 row
-
-left = current - 1 column
-
-bottom_left_diagonal = current - 1 column + 1 row
-
-
-
-top_right_diagonal = current + 1 column - 1 row
-
-right = current + 1 column
-
-bottom_right_diagonal = current + 1 column + 1 column
-
-
-
-up = current - 1 row
-
-down = current + 1 line
-
-
-
-neighbors_amount = top_left_diagonal + left + bottom_left_diagonal + top_right_diagonal + bottom_right_diagonal + up + down
-
-
-
-Inside start method, create conditional statements to check if the wihch rule will be executed:
-
-
-
-Living cell 
-
-neighbors_amount < 2:
-
-​	 current = 0
-
-neighbors_amount > 3: 
-
-​	current = 0
-
-neighbors_amount == 2
-
-​	pass
-
-
-
-Dead cell
-
-neighbors_amount == 3:
-
-​	current = 1
